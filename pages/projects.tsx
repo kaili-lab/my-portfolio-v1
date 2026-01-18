@@ -24,7 +24,7 @@ const Projects = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     const element = document.getElementById("projects");
@@ -52,7 +52,7 @@ const Projects = () => {
         "Vercel",
       ],
       status: "Live",
-      liveUrl: "https://your-blog-platform.vercel.app",
+      liveUrl: "https://blog-v1-oy940l7mj-kaili-projects.vercel.app/",
       githubUrl: "https://github.com/hi-carry-lee/blog-v1",
     },
     {
@@ -76,22 +76,21 @@ const Projects = () => {
     {
       title: "English Assistant",
       description:
-        "An AI powered English assistant that can help you learn English.",
+        "An AI powered English Vocabulary assistant that can help you learn English.",
       icon: "📋",
       tech: [
-        "Next.js",
-        "Nest.js",
+        "React.js",
+        "Hono.js",
         "PostgreSQL",
         "TypeScript",
         "OpenAI",
         "ShadcnUI",
         "TailWind CSS",
-        "Redis",
-        "Vercel",
+        "Cloudflare Workers",
       ],
       status: "Coming Soon",
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/kaili-lab/vocab-master-v1",
     },
   ];
 
@@ -158,13 +157,13 @@ const Projects = () => {
                           project.status === "Live"
                             ? "bg-green-400"
                             : project.status === "Development"
-                            ? "bg-yellow-400"
-                            : "bg-blue-400"
+                              ? "bg-yellow-400"
+                              : "bg-blue-400"
                         }`}
                       />
                       <span
                         className={`text-sm font-medium px-2 py-1 rounded-full border ${getStatusColor(
-                          project.status
+                          project.status,
                         )}`}
                       >
                         {project.status}
