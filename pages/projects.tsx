@@ -52,7 +52,7 @@ const Projects = () => {
         "Vercel",
       ],
       status: "Live",
-      liveUrl: "https://blog-v1-oy940l7mj-kaili-projects.vercel.app/",
+      liveUrl: "https://blog.kaili.dev",
       githubUrl: "https://github.com/hi-carry-lee/blog-v1",
     },
     {
