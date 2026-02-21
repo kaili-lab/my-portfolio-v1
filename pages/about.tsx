@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Layers, Code2, Users } from "lucide-react";
+import { Bot, Code2, Users } from "lucide-react";
 
 export default function AboutMe({ years }: { years: number }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -58,23 +58,23 @@ export default function AboutMe({ years }: { years: number }) {
             style={{ animationDelay: "200ms" }}
           >
             <div
-              className="w-12 h-12 bg-green-500 rounded-xl flex items-center 
+              className="w-12 h-12 bg-green-500 rounded-xl flex items-center
                           justify-center mb-4"
             >
-              <Layers className="w-6 h-6 text-white" />
+              <Bot className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-xl font-bold mb-3 text-card-foreground">
-              Versatile Developer
+              AI Agent Builder
             </h3>
             <p className="text-card-foreground/70 mb-4">
-              From building MVPs to maintaining legacy systems, I adapt to your
-              project needs. Comfortable with both greenfield and brownfield
-              development.
+              Building AI-powered applications with LangChain & LangGraph.
+              From RAG pipelines to multi-agent orchestration, I turn LLMs
+              into reliable product features.
             </p>
             <div className="text-sm text-card-foreground/60">
-              ⚡ Experience:{" "}
+              ⚡ Focus:{" "}
               <span className="font-semibold">
-                Prototypes · New Projects · Maintenance
+                LangGraph · RAG · Multi-Agent Systems
               </span>
             </div>
           </div>
@@ -114,7 +114,13 @@ export default function AboutMe({ years }: { years: number }) {
               <div>
                 ⚙️ Backend:{" "}
                 <span className="font-semibold">
-                  Node.js · Java · PostgreSQL
+                  Java · Node.js · PostgreSQL
+                </span>
+              </div>
+              <div>
+                🤖 AI:{" "}
+                <span className="font-semibold">
+                  LangChain · LangGraph · OpenAI
                 </span>
               </div>
             </div>
@@ -148,7 +154,7 @@ export default function AboutMe({ years }: { years: number }) {
             </p>
             <div className="text-sm text-card-foreground/60">
               🌏 Timezone:{" "}
-              <span className="font-semibold">UTC+8 (flexible hours)</span>
+              <span className="font-semibold">UTC+8 · 4+ hrs overlap with EST/PST</span>
             </div>
           </div>
         </div>
@@ -165,8 +171,8 @@ export default function AboutMe({ years }: { years: number }) {
             <span className="font-medium text-card-foreground">
               {years}+ years of experience
             </span>{" "}
-            in Java and modern web technologies. I enjoy solving complex
-            problems and building products that users love.
+            in Java and modern web technologies. Now focused on building
+            AI-powered applications with LangChain and LangGraph.
             <span className="font-medium text-card-foreground">
               {" "}
               Currently seeking remote opportunities.

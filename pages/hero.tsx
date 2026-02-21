@@ -2,7 +2,7 @@ import { GithubIcon, TwitterIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaNode, FaReact } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
+import { SiTypescript, SiLangchain } from "react-icons/si";
 
 export default function Hero({ years }: { years: number }) {
   return (
@@ -29,14 +29,17 @@ export default function Hero({ years }: { years: number }) {
                 Kai Li
               </div>
               <div className="text-4xl md:text-5xl font-bold text-foreground/70">
-                Full Stack Developer
+                AI Agent Builder
+              </div>
+              <div className="text-2xl md:text-3xl font-semibold text-primary/80">
+                & Full Stack Developer
               </div>
             </h1>
 
             {/* 一句话介绍 - 精简版 */}
             <p className="text-xl text-foreground/70 leading-relaxed max-w-lg">
-              Building modern web applications with React, Node.js, and
-              TypeScript.
+              Building full-stack web apps and AI-powered agents with
+              React, Node.js, and LangGraph.
               <span className="font-medium text-foreground">
                 {" "}
                 From concept to deployment.
@@ -155,21 +158,21 @@ export default function Hero({ years }: { years: number }) {
                 </div>
               </div>
 
-              {/* 浮动卡片 3: Node.js - 底部中间 */}
+              {/* 浮动卡片 3: LangChain - 底部中间 */}
               <div
-                className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-card p-4 
-                            rounded-2xl shadow-lg border border-border animate-float 
-                            [animation-delay:400ms] hover:scale-105 transition-transform 
+                className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-card p-4
+                            rounded-2xl shadow-lg border border-border animate-float
+                            [animation-delay:400ms] hover:scale-105 transition-transform
                             duration-300"
               >
                 <div className="flex items-center gap-3">
-                  <FaNode className="w-8 h-8 text-[#339933]" />
+                  <SiLangchain className="w-8 h-8 text-[#1C3C3C]" />
                   <div>
                     <div className="font-semibold text-card-foreground">
-                      Node.js
+                      LangChain
                     </div>
                     <div className="text-xs text-card-foreground/60">
-                      Advanced
+                      AI Agents
                     </div>
                   </div>
                 </div>

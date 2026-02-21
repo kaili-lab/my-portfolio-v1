@@ -18,7 +18,7 @@ const Footer = () => {
               Kai Li
             </h3>
             <p className="text-foreground/70 text-sm mt-1">
-              Full Stack Developer
+              AI Agent Builder & Full Stack Developer
             </p>
           </div>
 
@@ -51,7 +51,7 @@ const Footer = () => {
         <div className="border-t border-border/10 mt-6 pt-6">
           {/* 底部版权信息 */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-foreground/60">
-            <p>© 2025 Kai Li. All rights reserved.</p>
+            <p>© 2025 - {new Date().getFullYear()} Kai Li. All rights reserved.</p>
             <p>Built with Next.js & Tailwind CSS</p>
           </div>
         </div>

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Code2, Database, Cpu, Zap } from "lucide-react";
+import { Code2, Bot, Server, Zap } from "lucide-react";
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -57,20 +57,30 @@ const Skills = () => {
       ],
     },
     {
-      icon: <Database className="h-8 w-8" />,
-      title: "Database & Performance",
+      icon: <Bot className="h-8 w-8" />,
+      title: "AI & Agent Engineering",
       skills: [
         {
-          name: "MySQL, PostgreSQL, Redis, MongoDB",
+          name: "LangChain, LangGraph",
           description:
-            "MySQL is my comfort zone, especially when it comes to optimizing slow queries and database design. Redis for caching, MongoDB when flexibility matters.",
+            "Building AI agents and multi-agent systems. Designed a LangGraph-based multi-agent pipeline for complex task orchestration.",
+        },
+        {
+          name: "Prompt Engineering, RAG",
+          description:
+            "Crafting reliable prompts and retrieval-augmented generation pipelines. Implemented vector search with Pinecone for semantic content discovery.",
         },
       ],
     },
     {
-      icon: <Cpu className="h-8 w-8" />,
-      title: "Architecture & Systems",
+      icon: <Server className="h-8 w-8" />,
+      title: "Infrastructure",
       skills: [
+        {
+          name: "PostgreSQL, Redis",
+          description:
+            "PostgreSQL is my go-to database, from schema design to query optimization and performance tuning. Redis for caching and session management when speed is critical.",
+        },
         {
           name: "System Design, Message Queues",
           description:

@@ -57,26 +57,29 @@ const Projects = () => {
     },
     {
       title: "Home Task",
-      description: "Task management app with an AI assistant.",
+      description:
+        "Task management app powered by a LangGraph multi-agent system. Multiple AI agents collaborate to understand, plan, and execute complex task operations.",
       icon: "📅",
       tech: [
         "React.js",
         "Hono.js",
+        "Drizzle",
         "PostgreSQL",
         "TypeScript",
         "ShadcnUI",
         "TailWind CSS",
         "OpenAI",
         "LangChain",
+        "LangGraph",
       ],
-      status: "Coming Soon",
+      status: "Development",
       liveUrl: "#",
       githubUrl: "https://github.com/kaili-lab/home-task",
     },
     {
       title: "Vocab Master",
       description:
-        "An AI powered English Vocabulary assistant that can help you learn English vocabulary.",
+        "An AI-powered English vocabulary assistant. Uses OpenAI to generate contextual examples, quizzes, and personalized learning paths.",
       icon: "📋",
       tech: [
         "React.js",
@@ -88,9 +91,29 @@ const Projects = () => {
         "TailWind CSS",
         "Cloudflare Workers",
       ],
-      status: "Coming Soon",
+      status: "Development",
       liveUrl: "#",
       githubUrl: "https://github.com/kaili-lab/vocab-master-v1",
+    },
+        {
+      title: "Knowledge Chat",
+      description:
+        "An AI knowledge assistant built with RAG. Upload documents and chat with your knowledge base using retrieval-augmented generation.",
+      icon: "💬",
+      tech: [
+        "Next.js",
+        "Drizzle",
+        "PostgreSQL",
+        "TypeScript",
+        "OpenAI",
+        "RAG",
+        "ShadcnUI",
+        "TailWind CSS",
+        "Vercel",
+      ],
+      status: "Development",
+      liveUrl: "#",
+      githubUrl: "https://github.com/kaili-lab/chatbot-base-v1",
     },
   ];
 

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 import { Button } from "@/components/ui/button";
-import { Github, TwitterIcon } from "lucide-react";
+import { Github, TwitterIcon, Globe, Clock, Zap } from "lucide-react";
 import Link from "next/link";
 
 const Contact = () => {
@@ -29,7 +29,7 @@ const Contact = () => {
 
   // 邮箱地址 - 简单混淆
   const getEmail = () => {
-    const parts = ["test-demo", "gmail", "com"];
+    const parts = ["nautilus1876", "gmail", "com"];
     return `${parts[0]}@${parts[1]}.${parts[2]}`;
   };
 
@@ -56,7 +56,7 @@ const Contact = () => {
         </h2>
         <p className="text-slate-600 dark:text-slate-400 text-base md:text-lg">
           I&apos;m currently seeking remote opportunities as a Full Stack
-          Developer.
+          Developer & AI Agent Builder.
         </p>
       </div>
 
@@ -80,12 +80,12 @@ const Contact = () => {
         </p>
 
         {/* 简历下载按钮 */}
-        <Link
-          href="/path/to/your-resume.pdf" // 替换为简历链接
-          className="w-full max-w-xs py-3 px-5 rounded-xl text-white font-semibold text-base bg-gradient-to-r from-blue-600 to-emerald-600 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 text-center"
+        <button
+          disabled
+          className="w-full max-w-xs py-3 px-5 rounded-xl text-white/60 font-semibold text-base bg-gradient-to-r from-blue-600/50 to-emerald-600/50 cursor-not-allowed text-center"
         >
-          Download Resume
-        </Link>
+          📄 Resume (Coming Soon)
+        </button>
 
         {/* 社交链接 */}
         <div
@@ -114,19 +114,34 @@ const Contact = () => {
 
         {/* 状态指示器 */}
         <div
-          className={`text-center space-y-2 mt-6 transition-all duration-1000 ${
+          className={`flex flex-wrap justify-center gap-3 mt-6 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
           style={{ animationDelay: "600ms" }}
         >
-          <span className="text-gray-600 dark:text-gray-300">
-            Available for Remote Work
-          </span>
-          <div className="text-blue-600 dark:text-blue-300 text-sm">
-            Typically respond within 24 hours
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 dark:bg-green-900/30 rounded-full border border-green-200 dark:border-green-800">
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+            <span className="text-sm font-medium text-green-700 dark:text-green-300">
+              Available for Remote Work
+            </span>
           </div>
-          <div className="text-sm text-gray-400 dark:text-gray-500">
-            Timezone: UTC+8 (Flexible hours)
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full border border-blue-200 dark:border-blue-800">
+            <Zap className="w-3.5 h-3.5 text-blue-600 dark:text-blue-300" />
+            <span className="text-sm font-medium text-blue-700 dark:text-blue-300">
+              Async-friendly
+            </span>
+          </div>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 dark:bg-purple-900/30 rounded-full border border-purple-200 dark:border-purple-800">
+            <Globe className="w-3.5 h-3.5 text-purple-600 dark:text-purple-300" />
+            <span className="text-sm font-medium text-purple-700 dark:text-purple-300">
+              UTC+8 · 4+ hrs overlap with EST/PST
+            </span>
+          </div>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-100 dark:bg-amber-900/30 rounded-full border border-amber-200 dark:border-amber-800">
+            <Clock className="w-3.5 h-3.5 text-amber-600 dark:text-amber-300" />
+            <span className="text-sm font-medium text-amber-700 dark:text-amber-300">
+              Respond within 24 hours
+            </span>
           </div>
         </div>
       </div>

@@ -11,21 +11,20 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: {
     template: "%s | Kai Li's Portfolio",
-    default: "Kai Li's Portfolio - Full-Stack Developer",
+    default: "Kai Li — AI Agent Builder & Full-Stack Developer",
   },
   description:
-    "Remote Full-Stack Developer specializing in Next.js, React, Java backend, and modern web development. Available for your next project worldwide.",
-  // 社交分享优化 - 核心功能
+    "AI Agent Builder & Full-Stack Developer. Building multi-agent systems with LangChain/LangGraph. 6+ years Java backend, React/Next.js frontend. Available for remote work.",
   openGraph: {
-    title: "Kai Li's Portfolio - Full-Stack Developer",
+    title: "Kai Li — AI Agent Builder & Full-Stack Developer",
     description:
-      "Remote Full-Stack Developer specializing in Next.js, React, Java backend, and modern web development.",
+      "AI Agent Builder & Full-Stack Developer. Building multi-agent systems with LangChain/LangGraph. Available for remote work.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kai Li's Portfolio - Full-Stack Developer",
+    title: "Kai Li — AI Agent Builder & Full-Stack Developer",
     description:
-      "Remote Full-Stack Developer specializing in Next.js, React, Java backend, and modern web development.",
+      "AI Agent Builder & Full-Stack Developer. Building multi-agent systems with LangChain/LangGraph. Available for remote work.",
   },
 };
 
