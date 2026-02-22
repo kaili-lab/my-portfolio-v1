@@ -45,7 +45,6 @@ const Projects = () => {
         "PostgreSQL",
         "Prisma",
         "OpenAI",
-        "Pinecone",
         "NextAuth",
         "ShadcnUI",
         "TailWind CSS",
