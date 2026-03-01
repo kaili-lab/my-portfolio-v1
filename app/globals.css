@@ -159,6 +159,14 @@
     animation: fade-in 0.6s ease-out forwards;
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    .animate-float,
+    .animate-fade-in,
+    .skill-tag {
+      animation: none !important;
+    }
+  }
+
   /* 技能标签动画 */
   .skill-tag {
     animation: fade-in 0.6s ease-out forwards;
@@ -183,20 +191,6 @@
   .skill-tag:nth-child(6) {
     animation-delay: 0.6s;
   }
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
 }
 
 .delay-100 {

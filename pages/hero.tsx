@@ -125,6 +125,7 @@ export default function Hero({ years }: { years: number }) {
                 href="https://github.com/kaili-lab"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Open Kai Li GitHub profile"
                 className="text-foreground/60 hover:text-foreground transition-colors"
               >
                 <GithubIcon size={24} />
@@ -133,6 +134,7 @@ export default function Hero({ years }: { years: number }) {
                 href="https://x.com/kaili_dev"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Open Kai Li X profile"
                 className="text-foreground/60 hover:text-foreground transition-colors"
               >
                 <TwitterIcon size={24} />
@@ -199,19 +201,19 @@ export default function Hero({ years }: { years: number }) {
               <SkillBadge
                 title="React"
                 level="Expert"
-                position="-top-4 -left-3 animate-float"
+                position="-top-4 -left-3 motion-safe:animate-float"
                 icon={<FaReact className="h-6 w-6 text-[#61DAFB]" />}
               />
               <SkillBadge
                 title="TypeScript"
                 level="Advanced"
-                position="-top-4 -right-3 animate-float [animation-delay:200ms]"
+                position="-top-4 -right-3 motion-safe:animate-float [animation-delay:200ms]"
                 icon={<SiTypescript className="h-6 w-6 text-[#3178C6]" />}
               />
               <SkillBadge
                 title="LangChain"
                 level="AI Agents"
-                position="-bottom-5 left-1/2 -translate-x-1/2 animate-float [animation-delay:400ms]"
+                position="-bottom-5 left-1/2 -translate-x-1/2 motion-safe:animate-float [animation-delay:400ms]"
                 icon={<SiLangchain className="h-6 w-6 text-[#1C3C3C] dark:text-[#93C5C5]" />}
               />
             </div>

@@ -79,13 +79,19 @@ const Contact = () => {
           Click to copy email address
         </p>
 
-        {/* 简历下载按钮 */}
-        <button
-          disabled
-          className="w-full max-w-xs py-3 px-5 rounded-xl text-white/60 font-semibold text-base bg-gradient-to-r from-blue-600/50 to-emerald-600/50 cursor-not-allowed text-center"
+        {/* 使用 Next.js Link + Button 组合，保持站内组件风格一致并支持静态资源下载 */}
+        <Button
+          asChild
+          className="w-full max-w-xs py-3 px-5 h-auto rounded-xl text-white font-semibold text-base bg-gradient-to-r from-blue-600 to-emerald-600 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300"
         >
-          📄 Resume (Coming Soon)
-        </button>
+          <Link
+            href="/kai-li-resume.pdf"
+            download
+            aria-label="Download resume PDF"
+          >
+            📄 Download Resume
+          </Link>
+        </Button>
 
         {/* 社交链接 */}
         <div
