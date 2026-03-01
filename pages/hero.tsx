@@ -1,8 +1,39 @@
-import { GithubIcon, TwitterIcon } from "lucide-react";
-import Image from "next/image";
+import { BrainCircuit, GithubIcon, TwitterIcon } from "lucide-react";
 import Link from "next/link";
-import { FaNode, FaReact } from "react-icons/fa";
+import type { ReactNode } from "react";
+import { FaReact } from "react-icons/fa";
 import { SiTypescript, SiLangchain } from "react-icons/si";
+import HeroStatusRotator from "@/components/hero-status-rotator";
+
+function SkillBadge({
+  icon,
+  title,
+  level,
+  position,
+}: {
+  icon: ReactNode;
+  title: string;
+  level: string;
+  position: string;
+}) {
+  return (
+    <div
+      className={`absolute ${position} z-20 min-w-[146px] rounded-2xl border border-border/70 bg-card/95 p-4 shadow-xl backdrop-blur-sm transition-transform duration-300 hover:scale-105`}
+    >
+      <div className="flex items-center gap-3">
+        <div className="rounded-lg bg-background/70 p-2 dark:bg-background/20">
+          {icon}
+        </div>
+        <div>
+          <div className="text-sm font-bold text-card-foreground">{title}</div>
+          <div className="text-[10px] uppercase tracking-wider text-card-foreground/60">
+            {level}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Hero({ years }: { years: number }) {
   return (
@@ -111,72 +142,78 @@ export default function Hero({ years }: { years: number }) {
 
           {/* 右侧：视觉元素 */}
           <div className="relative">
-            {/* 你的照片/头像 */}
             <div className="relative w-full aspect-square max-w-md mx-auto">
-              <Image
-                src="/your-photo.jpg"
-                alt="Kai Li"
-                fill
-                className="rounded-3xl object-cover shadow-2xl"
+              {/* 用点阵+渐变做“科技画布”，在亮/暗主题下都维持轻量层次感 */}
+              <div className="absolute inset-0 rounded-[2.25rem] border border-border/70 bg-gradient-to-br from-card/95 via-background to-emerald-100/40 shadow-2xl dark:from-card/85 dark:via-card/75 dark:to-emerald-900/35" />
+              <div className="absolute inset-0 rounded-[2.25rem] [background-image:radial-gradient(circle,rgba(15,23,42,0.08)_1px,transparent_1px)] [background-size:18px_18px] opacity-60 dark:[background-image:radial-gradient(circle,rgba(255,255,255,0.08)_1px,transparent_1px)] dark:opacity-40" />
+
+              {/* 连线把三张技能卡和中心中枢绑定在一起，弱化“只是装饰块”的观感 */}
+              <svg
+                viewBox="0 0 100 100"
+                className="pointer-events-none absolute inset-0 h-full w-full text-emerald-500/30 dark:text-emerald-300/25"
+                aria-hidden="true"
+              >
+                <line x1="50" y1="50" x2="20" y2="20" stroke="currentColor" strokeWidth="0.3" />
+                <line x1="50" y1="50" x2="80" y2="20" stroke="currentColor" strokeWidth="0.3" />
+                <line x1="50" y1="50" x2="50" y2="84" stroke="currentColor" strokeWidth="0.3" />
+              </svg>
+
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="relative h-64 w-64 sm:h-72 sm:w-72">
+                  <div className="absolute inset-0 rounded-full border border-emerald-500/25 motion-safe:animate-spin [animation-duration:26s]" />
+                  <div className="absolute inset-7 rounded-full border border-dashed border-emerald-500/35 motion-safe:animate-spin [animation-direction:reverse] [animation-duration:17s]" />
+                  <div className="absolute inset-10 rounded-full bg-emerald-500/12 blur-3xl" />
+                  <div className="absolute inset-[28%] rounded-[1.4rem] border border-border/70 bg-background/70 shadow-inner backdrop-blur-md dark:bg-card/70" />
+
+                  {Array.from({ length: 8 }).map((_, index) => (
+                    <div
+                      key={index}
+                      className="absolute inset-0 motion-safe:animate-spin"
+                      style={{
+                        animationDuration: `${12 + index * 1.8}s`,
+                        animationDelay: `${index * 0.25}s`,
+                        animationDirection: index % 2 === 0 ? "normal" : "reverse",
+                      }}
+                    >
+                      <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(16,185,129,0.75)]" />
+                    </div>
+                  ))}
+
+                  <div className="relative z-10 flex h-full flex-col items-center justify-center gap-3">
+                    <div className="relative">
+                      <div className="absolute inset-0 rounded-2xl bg-emerald-400/40 blur-xl motion-safe:animate-pulse" />
+                      <div className="relative rounded-2xl border border-emerald-500/35 bg-card p-4 shadow-lg dark:bg-card/90">
+                        <BrainCircuit className="h-10 w-10 text-emerald-500 dark:text-emerald-300" />
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <span className="text-[11px] font-mono font-bold uppercase tracking-[0.22em] text-emerald-600 dark:text-emerald-300">
+                        Neural Hub
+                      </span>
+                      <HeroStatusRotator />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <SkillBadge
+                title="React"
+                level="Expert"
+                position="-top-4 -left-3 animate-float"
+                icon={<FaReact className="h-6 w-6 text-[#61DAFB]" />}
               />
-
-              {/* 浮动卡片 1: React - 左上 */}
-              <div
-                className="absolute -top-4 -left-4 bg-card p-4 rounded-2xl shadow-lg 
-                            border border-border animate-float hover:scale-105 
-                            transition-transform duration-300"
-              >
-                <div className="flex items-center gap-3">
-                  <FaReact className="w-8 h-8 text-[#61DAFB]" />
-                  <div>
-                    <div className="font-semibold text-card-foreground">
-                      React
-                    </div>
-                    <div className="text-xs text-card-foreground/60">
-                      Expert
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* 浮动卡片 2: TypeScript - 右上 */}
-              <div
-                className="absolute -top-4 -right-4 bg-card p-4 rounded-2xl shadow-lg 
-                            border border-border animate-float [animation-delay:200ms] 
-                            hover:scale-105 transition-transform duration-300"
-              >
-                <div className="flex items-center gap-3">
-                  <SiTypescript className="w-8 h-8 text-[#3178C6]" />
-                  <div>
-                    <div className="font-semibold text-card-foreground">
-                      TypeScript
-                    </div>
-                    <div className="text-xs text-card-foreground/60">
-                      Advanced
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* 浮动卡片 3: LangChain - 底部中间 */}
-              <div
-                className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-card p-4
-                            rounded-2xl shadow-lg border border-border animate-float
-                            [animation-delay:400ms] hover:scale-105 transition-transform
-                            duration-300"
-              >
-                <div className="flex items-center gap-3">
-                  <SiLangchain className="w-8 h-8 text-[#1C3C3C]" />
-                  <div>
-                    <div className="font-semibold text-card-foreground">
-                      LangChain
-                    </div>
-                    <div className="text-xs text-card-foreground/60">
-                      AI Agents
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <SkillBadge
+                title="TypeScript"
+                level="Advanced"
+                position="-top-4 -right-3 animate-float [animation-delay:200ms]"
+                icon={<SiTypescript className="h-6 w-6 text-[#3178C6]" />}
+              />
+              <SkillBadge
+                title="LangChain"
+                level="AI Agents"
+                position="-bottom-5 left-1/2 -translate-x-1/2 animate-float [animation-delay:400ms]"
+                icon={<SiLangchain className="h-6 w-6 text-[#1C3C3C] dark:text-[#93C5C5]" />}
+              />
             </div>
           </div>
         </div>
