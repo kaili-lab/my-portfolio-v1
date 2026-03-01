@@ -71,8 +71,8 @@ const Projects = () => {
         "LangChain",
         "LangGraph",
       ],
-      status: "Development",
-      liveUrl: "#",
+      status: "Live",
+      liveUrl: "https://task.kaili.dev/today",
       githubUrl: "https://github.com/kaili-lab/home-task",
     },
     {
@@ -90,8 +90,8 @@ const Projects = () => {
         "TailWind CSS",
         "Cloudflare Workers",
       ],
-      status: "Development",
-      liveUrl: "#",
+      status: "Live",
+      liveUrl: "https://vocab.kaili.dev/",
       githubUrl: "https://github.com/kaili-lab/vocab-master-v1",
     },
         {
