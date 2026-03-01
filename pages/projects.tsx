@@ -274,7 +274,7 @@ const Projects = () => {
         </div>
 
         {/* View More Projects Link */}
-        {projects.length > 3 && (
+        {/* {projects.length > 3 && (
           <div className="text-center mt-12">
             <div
               className={`transition-all duration-1000 delay-600 ${
@@ -295,7 +295,7 @@ const Projects = () => {
               </Button>
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </section>
   );
