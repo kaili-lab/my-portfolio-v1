@@ -91,7 +91,7 @@ export const portfolioData = {
       },
       tech: ["React", "Hono.js", "PostgreSQL", "LangChain", "LangGraph"],
       status: "Live" as const,
-      liveUrl: "https://task.kaili.dev/today",
+      liveUrl: "https://task.kaili.dev",
       githubUrl: "https://github.com/kaili-lab/home-task",
     },
     {
@@ -113,7 +113,7 @@ export const portfolioData = {
       },
       tech: ["React", "Hono.js", "PostgreSQL", "OpenAI", "Cloudflare Workers"],
       status: "Live" as const,
-      liveUrl: "https://vocab.kaili.dev/",
+      liveUrl: "https://vocab.kaili.dev",
       githubUrl: "https://github.com/kaili-lab/vocab-master-v1",
     },
     {
