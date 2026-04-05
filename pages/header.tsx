@@ -8,20 +8,14 @@ const Header = () => {
 
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 768); // 768px is typical tablet/mobile breakpoint
+      setIsMobile(window.innerWidth < 768);
     };
 
-    // Check on mount
     checkScreenSize();
-
-    // Add event listener for window resize
     window.addEventListener("resize", checkScreenSize);
-
-    // Cleanup
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
-  // Show mobile header on mobile devices, web header on larger screens
   return isMobile ? <MobileMenu /> : <WebMenu />;
 };
 

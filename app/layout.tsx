@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} antialiased max-w-6xl mx-auto px-4 `}
+        className={`${inter.className} antialiased`}
       >
         <ThemeProvider
           attribute="class" // 使用 class 切换主题
