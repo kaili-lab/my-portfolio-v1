@@ -10,7 +10,9 @@
       "Bash(rm pages/about.tsx pages/contact.tsx pages/footer.tsx pages/header.tsx pages/hero.tsx pages/intro.tsx pages/projects.tsx pages/skills.tsx)",
       "Bash(rm pages/layouts/bento-grid.tsx pages/layouts/editorial.tsx)",
       "Bash(rm components/hero-status-rotator.tsx components/layout-switcher.tsx components/mobile-menu.tsx components/mode-toggle.tsx components/web-menu.tsx)",
-      "Bash(rm -rf components/ui)"
+      "Bash(rm -rf components/ui)",
+      "Bash(npm run:*)",
+      "Bash(netstat -ano)"
     ]
   }
 }
