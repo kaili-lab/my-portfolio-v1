@@ -63,7 +63,7 @@ export const portfolioData = {
       title: "全栈开发 · AI 应用方向",
       shortIntro: "坐标 UTC+8 · 优先远程",
       intro:
-        "6年+的后端全栈背景，目前在做 AI 相关的产品，可以从零独立开发完整应用",
+        "6年+的后端全栈经验, 熟悉 AI 应用开发和AI编程工具, 可以从零独立开发完整应用",
       nav: {
         about: "关于",
         projects: "项目",
@@ -89,7 +89,7 @@ export const portfolioData = {
         en: "Smart task system with multi-agent orchestration and voice interaction.",
         zh: "智能化任务系统，支持多 Agent 任务管理和语音交互。",
       },
-      tech: ["React", "Hono.js", "PostgreSQL", "LangChain", "LangGraph"],
+      tech: ["React", "Hono.js", "PostgreSQL", "LangChain"],
       status: "Live" as const,
       liveUrl: "https://task.kaili.dev",
       githubUrl: "https://github.com/kaili-lab/home-task",
@@ -100,7 +100,7 @@ export const portfolioData = {
         en: "Personal blog with AI summaries, auto-generated covers, and vector search.",
         zh: "个人博客，支持 AI 摘要、自动封面和向量搜索。",
       },
-      tech: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "OpenAI"],
+      tech: ["Next.js", "PostgreSQL", "OpenAI"],
       status: "Live" as const,
       liveUrl: "https://blog.kaili.dev",
       githubUrl: "https://github.com/hi-carry-lee/blog-v1",
@@ -122,35 +122,10 @@ export const portfolioData = {
         en: "Record ideas in Chinese, convert to natural English, reinforce with spaced repetition.",
         zh: "随时随地记录中文想法，转成自然的英文表达，再用间隔复习巩固下来。",
       },
-      tech: [
-        "React",
-        "TypeScript",
-        "Hono",
-        "Cloudflare Workers",
-        "Claude",
-        "Drizzle",
-      ],
+      tech: ["React", "Hono.js", "Cloudflare Workers", "OpenAI"],
       status: "Live" as const,
       liveUrl: "https://say-right.kaili.dev",
       githubUrl: "https://github.com/kaili-lab/say-right",
     },
   ] satisfies Project[],
-
-  timeline: [
-    {
-      period: "2020-2023",
-      label: "Java Backend",
-      detail: "Spring Boot, microservices, enterprise systems",
-    },
-    {
-      period: "2023-2024",
-      label: "Full Stack",
-      detail: "React, Next.js, Node.js",
-    },
-    {
-      period: "2024-now",
-      label: "AI Agent Builder",
-      detail: "LangChain, LangGraph, RAG",
-    },
-  ],
 };
