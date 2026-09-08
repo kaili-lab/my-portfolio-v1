@@ -3,28 +3,30 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "react-hot-toast";
+import { LocaleProvider } from "@/lib/locale-context";
 
 const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
   title: {
     template: "%s | Kai Li's Portfolio",
-    default: "Kai Li — AI Agent Builder & Full-Stack Developer",
+    default: "Kai Li — Backend & Full-Stack Developer",
   },
   description:
-    "AI Agent Builder & Full-Stack Developer. Building multi-agent systems with LangChain/LangGraph. 6+ years Java backend, React/Next.js frontend. Available for remote work.",
+    "Personal projects and work by Kai Li. Backend development with Java, Node.js, and Python; frontend with React. Open to remote opportunities.",
   openGraph: {
-    title: "Kai Li — AI Agent Builder & Full-Stack Developer",
+    title: "Kai Li — Backend & Full-Stack Developer",
     description:
-      "AI Agent Builder & Full-Stack Developer. Building multi-agent systems with LangChain/LangGraph. Available for remote work.",
+      "Personal projects, backend and full-stack development, and AI-assisted development. Open to remote opportunities.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kai Li — AI Agent Builder & Full-Stack Developer",
+    title: "Kai Li — Backend & Full-Stack Developer",
     description:
-      "AI Agent Builder & Full-Stack Developer. Building multi-agent systems with LangChain/LangGraph. Available for remote work.",
+      "Personal projects, backend and full-stack development, and AI-assisted development. Open to remote opportunities.",
   },
 };
 
@@ -36,15 +38,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} antialiased`}
+        className={`${inter.className} ${inter.variable} antialiased`}
       >
         <ThemeProvider
-          attribute="class" // 使用 class 切换主题
-          defaultTheme="dark" // 默认主题
-          enableSystem={true} // 跟随系统主题
-          disableTransitionOnChange
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={true}
         >
-          {children}
+          <LocaleProvider>{children}</LocaleProvider>
           <Toaster
             position="top-right"
             toastOptions={{

@@ -1,5 +1,5 @@
-import SplitScreenLayout from "@/pages/layouts/split-screen";
+import PortfolioSite from "@/components/portfolio-site";
 
 export default function Home() {
-  return <SplitScreenLayout />;
+  return <PortfolioSite />;
 }
