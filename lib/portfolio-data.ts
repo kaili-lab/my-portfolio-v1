@@ -63,13 +63,13 @@ export const portfolioData = {
       title: "全栈开发 · AI 应用方向",
       shortIntro: "坐标 UTC+8 · 优先远程",
       intro:
-        "6年+的后端全栈经验, 熟悉 AI 应用开发和AI编程工具, 可以从零独立开发完整应用",
+        "拥有 6 年以上后端与全栈开发经验，熟悉金融系统、AI 应用和 AI 辅助开发，能够独立完成从需求到上线的完整交付。",
       nav: {
         about: "关于",
         projects: "项目",
         contact: "联系",
       },
-      contactIntro: "在看远程方向的工作机会。",
+      contactIntro: "目前开放远程工作机会，欢迎联系",
       resumeLabel: "简历",
       blogLabel: "博客",
       themeToggleLabel: "切换主题",
@@ -86,8 +86,8 @@ export const portfolioData = {
     {
       title: "Home Task",
       description: {
-        en: "Smart task system with multi-agent orchestration and voice interaction.",
-        zh: "智能化任务系统，支持多 Agent 任务管理和语音交互。",
+        en: "AI-powered task workflow with voice interaction and language-driven task capture.",
+        zh: "用语音和自然语言记录、整理并推进日常任务的 AI 工作流",
       },
       tech: ["React", "Hono.js", "PostgreSQL", "LangChain"],
       status: "Live" as const,
@@ -98,7 +98,7 @@ export const portfolioData = {
       title: "AI Blog Platform",
       description: {
         en: "Personal blog with AI summaries, auto-generated covers, and vector search.",
-        zh: "个人博客，支持 AI 摘要、自动封面和向量搜索。",
+        zh: "个人博客平台，支持 AI 摘要、自动生成封面与语义搜索",
       },
       tech: ["Next.js", "PostgreSQL", "OpenAI"],
       status: "Live" as const,
@@ -109,7 +109,7 @@ export const portfolioData = {
       title: "Vocab Master",
       description: {
         en: "Context-based AI vocabulary tool focused on review and long-term retention.",
-        zh: "基于上下文的 AI 词汇助手，专注于复习和长期记忆。",
+        zh: "结合上下文生成练习的 AI 词汇工具，帮助用户持续复习并巩固记忆",
       },
       tech: ["React", "Hono.js", "PostgreSQL", "OpenAI", "Cloudflare Workers"],
       status: "Live" as const,
@@ -120,7 +120,7 @@ export const portfolioData = {
       title: "Say Right",
       description: {
         en: "Record ideas in Chinese, convert to natural English, reinforce with spaced repetition.",
-        zh: "随时随地记录中文想法，转成自然的英文表达，再用间隔复习巩固下来。",
+        zh: "记录日常中文想法，转换成自然英文表达，再通过间隔复习逐步掌握",
       },
       tech: ["React", "Hono.js", "Cloudflare Workers", "OpenAI"],
       status: "Live" as const,
